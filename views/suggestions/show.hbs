@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col s12 m8">
+        <h3>{{suggestion.title}}
+            <small>{{{editIcon suggestion.user user suggestion._id false}}}</small>
+        </h3>
+        <div class="card story">
+            <div class="card-content">
+                <span class="card-title">{{formatDate date 'MMMM Do YYYY, h:mm:ss a'}}</span>
+                {{{suggestion.body}}}
+            </div>
+        </div>
+    </div>
+    <div class="col s12 m4">
+        <div class="card center-align">
+            <div class="card-content">
+                <span class="card-title">{{suggestion.user.displayName}}</span>
+                <img src="{{suggestion.user.image}}" class="circle responsive-img img-small">
+            </div>
+            <div class="card-action">
+                <a href="/suggestions/user/{{story.user._id}}">More From {{suggestion.user.firstName}}</a>
+            </div>
+        </div>
+    </div>
+</div>
